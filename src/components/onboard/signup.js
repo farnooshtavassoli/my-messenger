@@ -41,7 +41,7 @@ import validate from '../../validation/validateFunction.js'
            onChange={(e) => this.handleChangeEmail(e)}
           name='email' />
          { this.state.emailError !== null &&
-              <p style={{ color: 'red' }}>{this.state.emailError}</p>
+              <p className= 'pError' style={{ color: '#c72963' }}>{this.state.emailError}</p>
             }
         <label className="fname">password</label>
         <input className='password'
@@ -49,7 +49,7 @@ import validate from '../../validation/validateFunction.js'
             onChange={(e) => this.handleChangeEmail(e)}
           type='password' />
         { this.state.passwordError !== null &&
-              <p style={{ color: 'red' }}>{this.state.passwordError}</p>
+              <p className= 'pError' style={{ color: '#c72963' }}>{this.state.passwordError}</p>
             }
         <label className="fname">Confirm password</label>
         <input className='confirmpassword'
@@ -57,7 +57,7 @@ import validate from '../../validation/validateFunction.js'
             onChange={(e) => this.handleChangeEmail(e)}
           type='confirmpassword' />
         { this.state.passwordError !== null &&
-              <p style={{ color: 'blue' }}>{this.state.confirmpassword}</p>
+              <p className= 'pError' style={{ color: '#c72963' }}>{this.state.confirmpassword}</p>
             }
         <button className='Login'
           onClick={() => this.validationFields()}

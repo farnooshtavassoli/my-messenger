@@ -218,3 +218,10 @@ body {
 
 
 }
+/*login p error*/
+
+.pError{
+  padding-top: -50px;
+  margin:7px;
+ 
+}

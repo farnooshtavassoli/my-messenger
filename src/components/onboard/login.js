@@ -37,7 +37,7 @@ class Login extends React.Component {
             name='email'
             />
             { this.state.emailError !== null &&
-              <p style={{ color: 'red' }}>{this.state.emailError}</p>
+              <p className= 'pError' style={{ color: '#c72963' }}>{this.state.emailError}</p>
             }
             <label className="fname">password</label>
             <input className=' password '
@@ -45,7 +45,7 @@ class Login extends React.Component {
             onChange={(e) => this.handleChangeEmail(e)}
               type='password' />
             { this.state.passwordError !== null &&
-              <p style={{ color: 'blue ' }}>{this.state.passwordError}</p>
+              <p  className= 'pError' style={{ color: '#c72963 ' }}>{this.state.passwordError}</p>
             }
             <button className='Login'
                onClick={() => this.validationFields()}
