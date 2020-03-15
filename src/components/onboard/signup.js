@@ -1,6 +1,6 @@
 import React from 'react'
 import validate from '../../validation/validateFunction.js'
-
+import MyInput from './input'
 
   class Signup extends React.Component{
      constructor () {
@@ -37,23 +37,26 @@ import validate from '../../validation/validateFunction.js'
 
         <h1 className='header'>Welcome</h1>
         <label className="fname">Email</label>
-        <input className='Username'
-           onChange={(e) => this.handleChangeEmail(e)}
-          name='email' />
+        <MyInput className='Username'
+          onChange={(e) => this.handleChangeEmail(e)}
+          name='email'
+         />
          { this.state.emailError !== null &&
               <p className= 'pError' style={{ color: '#c72963' }}>{this.state.emailError}</p>
             }
         <label className="fname">password</label>
-        <input className='password'
-         name='password'
+        <MyInput className='password'
+          name='password'
+
             onChange={(e) => this.handleChangeEmail(e)}
           type='password' />
         { this.state.passwordError !== null &&
               <p className= 'pError' style={{ color: '#c72963' }}>{this.state.passwordError}</p>
             }
         <label className="fname">Confirm password</label>
-        <input className='confirmpassword'
-         name='confirmpassword'
+        <MyInput className='confirmpassword'
+          name='confirmpassword'
+
             onChange={(e) => this.handleChangeEmail(e)}
           type='confirmpassword' />
         { this.state.passwordError !== null &&

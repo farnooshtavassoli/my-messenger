@@ -1,17 +1,28 @@
 import React from 'react'
+import pic from '../../pic.png'
+import ContactList from './contactlist'
 
-class ConverstationList extends React.Component{
+
+class ConvertationList extends React.Component{
     render() {
         return (
-            <div className ='conversation'>
-
-
-
+            <div className='contact'>
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
+                <ContactList />
             </div>
 
 
         )
     }
 }
-
-export default ConverstationList
+ export default ConvertationList

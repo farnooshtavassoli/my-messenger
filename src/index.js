@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import * as serviceWorker from './serviceWorker'
 
 
-ReactDOM.render(<Signup />, document.getElementById('root'))
+ReactDOM.render(<ChatBox />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
