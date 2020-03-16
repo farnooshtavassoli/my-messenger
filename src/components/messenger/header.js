@@ -8,7 +8,7 @@ class Header extends React.Component{
         return (
             <div className='header-container'>
                 <img className='head-pic' src={pic}/>
-                 <div className='header'>Farnoosh Tavassoli</div>
+                 <div className='header-messenger'>Farnoosh Tavassoli</div>
 
             </div>
 
