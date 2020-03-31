@@ -4,20 +4,41 @@ import { connect } from 'react-redux'
 import { sendNewMessage } from '../../action/conversation'
 
 class Footer extends React.Component{
-    constructor() {
-        super()
+
+    //remark: super will need to inherit the props from constructor if you want to use
+    // props in constructor
+    // more info:
+    // https://stackoverflow.com/questions/30571875/whats-the-difference-between-super-and-superprops-in-react-when-using-e
+    constructor(props) {
+        super(props)
         this.state = {
-            newMassage:''
+            newMassage: ''
         }
     }
+    // but here it's OK too:
+    // constructor() {
+    //   super()
+    //   this.state = {
+    //     newMassage:''
+    //   }
+    // }
 
-    sendMessage() {
+
+    // remark: use arrow function so you can use component's 'this' variable.
+    // if you want to use normal function instead of arrow function you must bind the
+    // function to class.
+    sendMessage = () => {
         this.props.dispatch(sendNewMessage(this.state.sendMessage))
         this.setState({ newMassage: ''})
     }
+    // sendMessage(){
+    //   this.props.dispatch(sendNewMessage(this.state.sendMessage))
+    //   this.setState({ newMassage: ''})
+    // }
+
+
     render() {
         return (
-
            <div className='footer'>
                 <input
                     className='new-message'
@@ -34,7 +55,14 @@ class Footer extends React.Component{
     }
 }
 
+
+
 const mapDispatchToProps = (dispatch) => ({
     dispatch : dispatch
 })
- export default connect (mapDispatchToProps)(Footer)
+
+// IMPORTANT
+// remark: connect function has two arguments, the first one is mapStateToProps which in this case
+// must be null, otherwise it won't work correctly.
+export default connect(null, mapDispatchToProps)(Footer)
+// export default connect(mapDispatchToProps)(Footer)
