@@ -1,26 +1,33 @@
 import React from 'react'
 import Header from './header'
+import sendIcon from '../../send.png'
 import ChatScreen from './chatScreen'
 import Footer from './footer'
-import ConvertationList from './convertationList'
+import ConversationList from './convertationList'
 
 
-class ChatBox extends React.Component{
+ export default  class ChatBox extends React.Component{
+    constructor() {
+        super()
+        this.state = {
+            newMessage:''
+        }
+        this.getNewMessage = this.getNewMessage.bind(this)
+    }
+
+    getNewMessage(newMessage) {
+        this.setState({newMessage})
+    }
     render() {
         return (
 
-            <div className='chatcontainer'>
-                <ConvertationList/>
                <div className='chatbox' >
                    <Header/>
-                   <ChatScreen />
-                   <Footer />
+                   <ChatScreen newMessage={this.state.newMessage}/>
+                   <Footer getValue={this.getNewMessage} />
 
-               </div>
-            </div>
-
+                </div>
 
         )
     }
 }
- export default ChatBox

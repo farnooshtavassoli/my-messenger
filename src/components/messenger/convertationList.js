@@ -1,24 +1,61 @@
 import React from 'react'
 import pic from '../../pic.png'
-import ContactList from './contactlist'
+import Conversation from './Conversation'
 
 
 class ConvertationList extends React.Component{
+     constructor  () {
+    super()
+        this.state = {
+            convList: [
+                {
+                    name : 'mina',
+                    latestMessage: 'hi',
+                    id:1
+
+                },
+                  {
+                    name : 'gvgrfb',
+                      latestMessage: 'hi',
+                    id:15
+
+
+                },
+
+                {
+                    name : 'erv',
+                    latestMessage: 'hi',
+                    id:11
+
+
+                },
+                      {
+                    name : 'erv',
+                          latestMessage: 'hi',
+                    id:12
+
+
+                }
+
+            ]
+        }
+    }
+
     render() {
         return (
             <div className='contact'>
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
-                <ContactList />
+
+                {
+                    this.state.convList.map((conv, index) => {
+                        return (
+                        <Conversation name={conv.name} key={conv.id}/>
+
+                        )
+
+                    })
+                }
+
+
             </div>
 
 

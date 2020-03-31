@@ -208,7 +208,7 @@ body {
    text-align: center;
    color:white;
    text-shadow: 2px 2px 4px #ea4c88;
-   
+
  }
 
 
@@ -256,7 +256,7 @@ body {
 
 
 
-.newMassage{
+.new-message{
   background-color: #2c3338;
   border: 1px solid #ea4c88;
    width: 50vw;
@@ -273,7 +273,7 @@ body {
 
 }
 
-.newMassage:hover{
+.new-message:hover{
   background-color: #3b4148;
    cursor: pointer;
    border-color: #c72963;
