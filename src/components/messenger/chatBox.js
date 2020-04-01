@@ -12,12 +12,18 @@ import ConversationList from './convertationList'
         this.state = {
             newMessage:''
         }
+
+        // IMPORTANT
+        // don't forget to bind the function when using ordinary function
+        // the alternative would be using an arrow function instead.
         this.getNewMessage = this.getNewMessage.bind(this)
     }
 
+    // you did bind the function to class so it's OK.
     getNewMessage(newMessage) {
         this.setState({newMessage})
     }
+
     render() {
         return (
 
