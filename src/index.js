@@ -2,10 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import Login from './components/onboard/login.js'
-import Signup from './components/onboard/signup'
-import Messenger from './components/messenger/index'
-import Button from '@material-ui/core/Button';
+
 import * as serviceWorker from './serviceWorker'
 
 
