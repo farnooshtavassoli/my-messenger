@@ -238,6 +238,7 @@ body {
   background-image: url('./chatpic.jpg');
   border-radius: 8px;
   -ms-overflow-style: none;
+  overflow-y: scroll;
 
 }
 .chatting::-webkit-scrollbar {
