@@ -8,7 +8,7 @@ class ChatScreen extends React.Component{
         super()
         this.state = {
             editMode: false,
-            id: -1
+            id: -1,
         }
     }
 
@@ -24,12 +24,14 @@ class ChatScreen extends React.Component{
         }
     }
     render() {
+          console.log('props::', this.props.messageList)
         return (
              <div className='chatting'>
                 {this.props.messageList.map((message, index) => {
                     if (this.state.editMode && this.state.id === index) {
                         return (
                             <input
+                                    className='edit-box'
                                 onChange={(e) => this.editMessageFunction(e, index)}
                                 value={message.text}
                                 onKeyPress={(e) => this.saveEdit(e)}
@@ -38,12 +40,13 @@ class ChatScreen extends React.Component{
                     } else {
                         return (
                             <p key={index}>
-                        {message.text}
-                        <sub onClick={() => this.setState({ editMode: true , id: index })}>
-                            edit
+                                {message.text}
 
-                        </sub>
-                    </p>
+                                <sub
+                                    onClick={() => this.setState({ editMode: true, id: index })}>
+                                    edit
+                                 </sub>
+                          </p>
 
                         )
                     }
@@ -62,4 +65,4 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch: dispatch
 })
 
- export default connect(mapStateToProps , mapDispatchToProps)(ChatScreen)
+ export default connect(mapStateToProps, mapDispatchToProps)(ChatScreen)

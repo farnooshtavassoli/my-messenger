@@ -22,7 +22,8 @@ import HeaderContainer from '../../container/HeaderContainer'
 
     // you did bind the function to class so it's OK.
     getNewMessage(newMessage) {
-        this.setState({newMessage})
+        this.setState({ newMessage })
+         console.log('newwwwwww::::', newMessage)
     }
 
     render() {
@@ -36,5 +37,5 @@ import HeaderContainer from '../../container/HeaderContainer'
                 </div>
 
         )
-    } 
+    }
 }

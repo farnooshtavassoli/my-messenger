@@ -46,6 +46,8 @@ class Footer extends React.Component{
                     onChange={(e) => this.setState ({ newMassage: e.target.value})}
                 />
                 <img
+
+                    width='40px'
                     className='sendIcon'
                     onClick={() => this.sendMessage()}
                     src={sendIcon} />
