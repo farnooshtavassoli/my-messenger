@@ -31,7 +31,7 @@ class ChatScreen extends React.Component{
                     if (this.state.editMode && this.state.id === index) {
                         return (
                             <input
-                                    className='edit-box'
+                                className='edit-box'
                                 onChange={(e) => this.editMessageFunction(e, index)}
                                 value={message.text}
                                 onKeyPress={(e) => this.saveEdit(e)}
@@ -47,13 +47,10 @@ class ChatScreen extends React.Component{
                                     edit
                                  </sub>
                           </p>
-
                         )
                     }
-
                  })}
-                    </div>
-
+               </div>
         )
     }
 }

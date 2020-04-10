@@ -1,15 +1,20 @@
 import React from 'react'
 import validate from '../../validation/validateFunction.js'
+import { Link } from 'react-router-dom'
 
 class Login extends React.Component {
-  constructor () {
+   constructor () {
     super()
-
     this.state = {
-      email: '',
-      password: '',
-      emailError: null,
-      passwordError: null
+      fields: {
+        email: '',
+        password: ''
+      },
+      error: {
+        email: '',
+        password: ''
+      },
+      clicked: false
     }
   }
 

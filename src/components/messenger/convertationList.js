@@ -1,11 +1,12 @@
 import React from 'react'
 import pic from '../../pic.png'
 import Conversation from './Conversation'
+import { connect } from 'react-redux'
 
 
 class ConvertationList extends React.Component{
      constructor  () {
-    super()
+        super()
         this.state = {
             convList: [
                 {
